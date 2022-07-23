@@ -38,15 +38,17 @@ export default class MyComponent extends Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
+    } else if (!(typeof items !== 'undefined' && items.length > 0)) {
+      return <div>No items</div>;
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.id}>
-              {item.name} {item.price}
-            </li>
-          ))}
-        </ul>
+          <ul>
+            {items.map(item => (
+                <li key={item.id}>
+                  {item.name} {item.price}
+                </li>
+            ))}
+          </ul>
       );
     }
   }
