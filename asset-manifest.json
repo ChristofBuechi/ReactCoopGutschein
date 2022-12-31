@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactCoopGutschein/static/css/main.f8e6f0c1.css",
+    "main.js": "/ReactCoopGutschein/static/js/main.3b06c775.js",
+    "static/js/787.d2daf1dc.chunk.js": "/ReactCoopGutschein/static/js/787.d2daf1dc.chunk.js",
+    "index.html": "/ReactCoopGutschein/index.html",
+    "main.f8e6f0c1.css.map": "/ReactCoopGutschein/static/css/main.f8e6f0c1.css.map",
+    "main.3b06c775.js.map": "/ReactCoopGutschein/static/js/main.3b06c775.js.map",
+    "787.d2daf1dc.chunk.js.map": "/ReactCoopGutschein/static/js/787.d2daf1dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8e6f0c1.css",
+    "static/js/main.3b06c775.js"
+  ]
+}
