@@ -1,0 +1,16 @@
+.form {
+    
+  }
+  
+  .form form {
+    display: inline-flex;
+    width: 100%;
+  }
+  .form input {
+    font: inherit;
+    display: inline-flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    text-indent: 1rem;
+  }
