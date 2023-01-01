@@ -1,7 +1,7 @@
 {
   "name": "gutschein",
   "version": "0.1.0",
-  "homepage": "https://christofbuechi.github.io/ReactCoopGutschein",
+  "homepage": "https://coop.christofbuechi.ch",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
