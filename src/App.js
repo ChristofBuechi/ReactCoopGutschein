@@ -1,10 +1,10 @@
 import './App.css';
-import SearchFeature from "./components/Features/SearchFeature";
+import LoadCodeFeature from "./components/Features/LoadCodeFeature";
 
 function App() {
     return (<div className="App">
             <div className="App-body">
-                <SearchFeature></SearchFeature>
+                <LoadCodeFeature></LoadCodeFeature>
             </div>
         </div>);
 }
