@@ -20,7 +20,7 @@ function LoadCodeFeature(props) {
             }
         }
         fetchData();
-    }, [data]);
+    }, [data, url]);
 
     return (
         <Card className={classes.form}>
