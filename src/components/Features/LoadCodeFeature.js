@@ -3,7 +3,7 @@ import classes from "./LoadCodeFeature.module.css";
 import Card from "../UI/Card";
 import QRCode from "react-qr-code";
 
-function LoadCodeFeature(props) {
+function LoadCodeFeature() {
     const url = "https://coopcouponcloudfunction-x2hqhf3efq-oa.a.run.app/";
 
     // Log messages to console
@@ -11,28 +11,36 @@ function LoadCodeFeature(props) {
     console.log("start loading");
 
     // Define state for code and value
-    const [data, setData] = useState({code: "", value: ""});
+    const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
 
     // Fetch data from server when component mounts
     useEffect(() => {
-        async function fetchData() {
-            // if (data.code.length < 1) {
+        const fetchData = async () => {
             const response = await fetch(url);
-            const jsonResult = await response.json();
-            console.log(JSON.stringify(`loaded: ${jsonResult}`));
-            setData(jsonResult);
+            const json = await response.json();
+            console.log(JSON.stringify(`loaded: ${JSON.stringify(json)}`));
+            setData(json);
             setIsLoading(false);
-        }
-        // }
+        };
         fetchData();
-    }, [data.code]);
+    }, []);
+
+    if (isLoading) {
+        return <Card className={classes.form}>
+            {(<div>Loading...</div>)}
+        </Card>;
+    }
+
 
     // Render QR code component with fetched code value
-    return (<Card className={classes.form}>
-            {isLoading ? (<div>Loading...</div>) : (<QRCode value={data.code}/>)}
-        </Card>);
+    return <Card className={classes.form}>
+        <h2>Loaded QR Code:</h2>
+            {<QRCode value={data.code}/>}
+        <pre>{`Rabatt ${data.value}`}</pre>
+
+        </Card>;
 }
 
 export default LoadCodeFeature;
