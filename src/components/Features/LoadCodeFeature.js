@@ -41,10 +41,9 @@ function LoadCodeFeature() {
         <div style={{ background: 'white', padding: '16px' }}>
             <Barcode value={data.code} />
         </div>
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfFlajp8N4Qa3UUNwNhTrYccwlGi2fes63UnjoGLxdwrFjahQ/viewform?embedded=true"
-            width="640" height="662" frameBorder="0" marginHeight="0" marginWidth="0">Loading…
-        </iframe>
+        <div>
+            <a href={'https://forms.gle/1tb6mL5LF3BFnEN1A'}>Feedback Formular</a>
+        </div>
         </Card>;
 }
 
