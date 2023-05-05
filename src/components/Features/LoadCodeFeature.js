@@ -36,11 +36,15 @@ function LoadCodeFeature() {
 
     // Render QR code component with fetched code value
     return <Card className={classes.form}>
-        <h2>Loaded QR Code:</h2>
+        <h2>Geladener Coop Code:</h2>
         <pre>{`Rabatt ${data.value}`}</pre>
         <div style={{ background: 'white', padding: '16px' }}>
             <Barcode value={data.code} />
         </div>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfFlajp8N4Qa3UUNwNhTrYccwlGi2fes63UnjoGLxdwrFjahQ/viewform?embedded=true"
+            width="640" height="662" frameBorder="0" marginHeight="0" marginWidth="0">Loading…
+        </iframe>
         </Card>;
 }
 
